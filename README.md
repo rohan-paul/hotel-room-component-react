@@ -1,4 +1,4 @@
-### Live Site Running here at [Nelify](https://hotel-room-react-component.netlify.com/)
+### Live Site Running here at [Netlify](https://hotel-room-react-component.netlify.com/)
 
 #### To launch the project locally
 
