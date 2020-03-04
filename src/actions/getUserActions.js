@@ -15,10 +15,14 @@ export const incrementRoomsNo = () => {
   }
 }
 
-export const decrementRoomsNo = () => {
+export const decrementRoomsNo = (noRooms, noAdults, noChildren) => {
   return {
     type: DECREMENT_NO_OF_ROOMS,
-    payload: 1,
+    payload: {
+      noRooms,
+      noAdults,
+      noChildren,
+    },
   }
 }
 

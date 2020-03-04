@@ -33,7 +33,7 @@ const EachRoom = ({
 
   const handleDecrementClick = () => {
     if (rooms) {
-      dispatch(decrementRoomsNo())
+      dispatch(decrementRoomsNo(no_of_rooms, no_of_adults, no_of_children))
     } else if (adults) {
       dispatch(decrementAdultsNo())
     } else if (children) {

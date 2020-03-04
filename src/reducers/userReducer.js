@@ -14,23 +14,49 @@ const initialState = {
 }
 
 export default (state = initialState, actions) => {
-  const totalPersons = state.no_of_adults + state.no_of_children
   switch (actions.type) {
     case INCREMENT_NO_OF_ROOMS:
-      console.log("ACTIONS RECD IN REDUCER", actions.payload)
       return {
         ...state,
         no_of_rooms: state.no_of_rooms + actions.payload,
       }
 
     case DECREMENT_NO_OF_ROOMS:
+      console.log("DECREMENT ROOM NO ", actions.payload)
+      const { noRooms, noAdults, noChildren } = actions.payload
+      const totalPersons = noAdults + noChildren
+      const excessPersonsAfterRoomDecrement = totalPersons - (noRooms - 1) * 4
+      console.log("EXCESS ", excessPersonsAfterRoomDecrement)
+
+      const excessChildrenToReduce =
+        excessPersonsAfterRoomDecrement > 0 &&
+        noChildren > 0 &&
+        excessPersonsAfterRoomDecrement >= noChildren
+          ? noChildren
+          : excessPersonsAfterRoomDecrement > 0 &&
+            noChildren > 0 &&
+            excessPersonsAfterRoomDecrement < noChildren
+          ? excessPersonsAfterRoomDecrement
+          : 0
+
+      const leftOverExcessAfterReducingChildren =
+        excessPersonsAfterRoomDecrement > 0 &&
+        excessPersonsAfterRoomDecrement - excessChildrenToReduce
+
+      console.log("EXCESS Children ", excessChildrenToReduce)
+      console.log(
+        "LEFT OverExcessAfterReducingChildren ",
+        leftOverExcessAfterReducingChildren,
+      )
+
       return {
         ...state,
-        no_of_rooms: state.no_of_rooms - actions.payload,
+        no_of_rooms: state.no_of_rooms - 1,
+        no_of_children: state.no_of_children - excessChildrenToReduce,
+        no_of_adults: state.no_of_adults - leftOverExcessAfterReducingChildren,
       }
 
     case INCREMENT_NO_OF_ADULTS:
-      console.log("ACTIONS RECD IN REDUCER", actions.payload)
       return {
         ...state,
         no_of_adults: state.no_of_adults + actions.payload,
@@ -43,7 +69,6 @@ export default (state = initialState, actions) => {
       }
 
     case INCREMENT_NO_OF_CHILDREN:
-      console.log("ACTIONS RECD IN REDUCER", actions.payload)
       return {
         ...state,
         no_of_children: state.no_of_children + actions.payload,
