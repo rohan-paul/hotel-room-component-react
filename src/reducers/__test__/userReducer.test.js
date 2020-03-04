@@ -195,4 +195,62 @@ describe("post reducer", () => {
     }
     expect(reducer(initialState, incrementAdultNoAction)).toEqual(expectedState)
   })
+
+  it("should handle DECREMENT_NO_OF_ADULTS", () => {
+    const decrementAdultNoAction = {
+      type: DECREMENT_NO_OF_ADULTS,
+      payload: 1,
+    }
+
+    const expectedState = {
+      no_of_rooms: 1,
+      no_of_adults: 1,
+      no_of_children: 0,
+    }
+    expect(reducer(initialState, decrementAdultNoAction)).toEqual(expectedState)
+  })
+
+  it("should handle INCREMENT_NO_OF_CHILDREN", () => {
+    const incrementChildrenNoAction = {
+      type: INCREMENT_NO_OF_CHILDREN,
+      payload: 1,
+    }
+
+    const initialState = {
+      no_of_rooms: 1,
+      no_of_adults: 1,
+      no_of_children: 0,
+    }
+
+    const expectedState = {
+      no_of_rooms: 1,
+      no_of_adults: 1,
+      no_of_children: 1,
+    }
+    expect(reducer(initialState, incrementChildrenNoAction)).toEqual(
+      expectedState,
+    )
+  })
+
+  it("should handle DECREMENT_NO_OF_CHILDREN", () => {
+    const decrementChildrenNoAction = {
+      type: DECREMENT_NO_OF_CHILDREN,
+      payload: 1,
+    }
+
+    const initialState = {
+      no_of_rooms: 1,
+      no_of_adults: 1,
+      no_of_children: 1,
+    }
+
+    const expectedState = {
+      no_of_rooms: 1,
+      no_of_adults: 1,
+      no_of_children: 0,
+    }
+    expect(reducer(initialState, decrementChildrenNoAction)).toEqual(
+      expectedState,
+    )
+  })
 })

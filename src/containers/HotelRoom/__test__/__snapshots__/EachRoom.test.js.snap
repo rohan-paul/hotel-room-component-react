@@ -1,0 +1,233 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EachRoom Component should render a startup component if startup is not complete 1`] = `
+<div
+  className="makeStyles-tableContainer-2"
+>
+  <div
+    className="makeStyles-roomsContainer-5"
+  >
+    <button
+      aria-label="Filter list"
+      className="MuiButtonBase-root MuiIconButton-root"
+      disabled={false}
+      onBlur={[Function]}
+      onDragLeave={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseLeave={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      tabIndex={0}
+      title="Click Me"
+      type="button"
+    >
+      <span
+        className="MuiIconButton-label"
+      >
+        <img
+          alt=""
+          className="makeStyles-avatar-4"
+          src={null}
+        />
+      </span>
+    </button>
+    <div
+      className="makeStyles-leftTextContainer-7"
+    >
+      <h6
+        className="MuiTypography-root MuiTypography-subtitle1"
+      />
+    </div>
+  </div>
+  <div
+    className="makeStyles-ctaContainer-6"
+  >
+    <button
+      aria-label="Filter list"
+      className="MuiButtonBase-root MuiIconButton-root"
+      disabled={false}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onDragLeave={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseLeave={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      tabIndex={0}
+      type="button"
+    >
+      <span
+        className="MuiIconButton-label"
+      >
+        <img
+          alt=""
+          className="makeStyles-avatar-4"
+          src="minus-icon.png"
+        />
+      </span>
+    </button>
+    <div
+      className="makeStyles-leftTextContainer-7"
+    >
+      <h6
+        className="MuiTypography-root MuiTypography-subtitle1"
+      />
+    </div>
+    <button
+      aria-label="Filter list"
+      className="MuiButtonBase-root MuiIconButton-root"
+      disabled={false}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onDragLeave={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseLeave={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      tabIndex={0}
+      type="button"
+    >
+      <span
+        className="MuiIconButton-label"
+      >
+        <img
+          alt=""
+          className="makeStyles-avatar-4"
+          src="plus-icon.png"
+        />
+      </span>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`EachRoom Component should should match snapshot 1`] = `
+<div
+  className="makeStyles-tableContainer-2"
+>
+  <div
+    className="makeStyles-roomsContainer-5"
+  >
+    <button
+      aria-label="Filter list"
+      className="MuiButtonBase-root MuiIconButton-root"
+      disabled={false}
+      onBlur={[Function]}
+      onDragLeave={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseLeave={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      tabIndex={0}
+      title="Click Me"
+      type="button"
+    >
+      <span
+        className="MuiIconButton-label"
+      >
+        <img
+          alt=""
+          className="makeStyles-avatar-4"
+          src={null}
+        />
+      </span>
+    </button>
+    <div
+      className="makeStyles-leftTextContainer-7"
+    >
+      <h6
+        className="MuiTypography-root MuiTypography-subtitle1"
+      />
+    </div>
+  </div>
+  <div
+    className="makeStyles-ctaContainer-6"
+  >
+    <button
+      aria-label="Filter list"
+      className="MuiButtonBase-root MuiIconButton-root"
+      disabled={false}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onDragLeave={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseLeave={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      tabIndex={0}
+      type="button"
+    >
+      <span
+        className="MuiIconButton-label"
+      >
+        <img
+          alt=""
+          className="makeStyles-avatar-4"
+          src="minus-icon.png"
+        />
+      </span>
+    </button>
+    <div
+      className="makeStyles-leftTextContainer-7"
+    >
+      <h6
+        className="MuiTypography-root MuiTypography-subtitle1"
+      />
+    </div>
+    <button
+      aria-label="Filter list"
+      className="MuiButtonBase-root MuiIconButton-root"
+      disabled={false}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onDragLeave={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseLeave={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      tabIndex={0}
+      type="button"
+    >
+      <span
+        className="MuiIconButton-label"
+      >
+        <img
+          alt=""
+          className="makeStyles-avatar-4"
+          src="plus-icon.png"
+        />
+      </span>
+    </button>
+  </div>
+</div>
+`;
