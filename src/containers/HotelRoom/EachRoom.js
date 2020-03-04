@@ -23,7 +23,7 @@ const EachRoom = ({
 
   const handleIncrementClick = () => {
     if (rooms) {
-      dispatch(incrementRoomsNo())
+      dispatch(incrementRoomsNo(no_of_rooms, no_of_adults))
     } else if (adults) {
       dispatch(incrementAdultsNo())
     } else if (children) {
@@ -47,10 +47,7 @@ const EachRoom = ({
     <>
       <div className={classes.tableContainer}>
         <div className={classes.roomsContainer}>
-          <IconButton
-            aria-label="Filter list"
-            classes={{ root: classes.button, disabled: classes.buttonDisabled }}
-          >
+          <IconButton aria-label="Filter list" title="Click Me">
             <img
               src={
                 adults
@@ -105,7 +102,6 @@ const EachRoom = ({
           </div>
           <IconButton
             aria-label="Filter list"
-            className={classes.adultIconContainer}
             onClick={handleIncrementClick}
             disabled={
               (rooms && no_of_rooms >= 5) ||

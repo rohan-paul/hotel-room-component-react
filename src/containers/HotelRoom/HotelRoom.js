@@ -3,8 +3,8 @@
 /* eslint-disable react/button-has-type */
 /* eslint-disable-next-line react-hooks/exhaustive-deps */
 import React from "react"
-import PropTypes from "prop-types"
-import { useSelector, useDispatch } from "react-redux"
+// import PropTypes from "prop-types"
+// import { useSelector, useDispatch } from "react-redux"
 import { useStyles } from "./HotelRoomStyles"
 import EachRoom from "./EachRoom"
 import {
@@ -18,12 +18,11 @@ import {
 
 const HotelRoom = () => {
   const classes = useStyles()
-  const globalStore = useSelector(state => state.globalStore)
+  // const globalStore = useSelector(state => state.globalStore)
   // const dispatch = useDispatch()
 
   return (
     <div className={classes.container}>
-      {/* {console.log("FULL STATE IN HOT ROOM ", globalStore)} */}
       <EachRoom
         rooms
         leftText={"ROOMS"}
@@ -46,8 +45,8 @@ const HotelRoom = () => {
   )
 }
 
-HotelRoom.propTypes = {
-  globalStore: PropTypes.object,
-}
+// HotelRoom.propTypes = {
+//   globalStore: PropTypes.object,
+// }
 
 export default HotelRoom

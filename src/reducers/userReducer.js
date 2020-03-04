@@ -16,17 +16,22 @@ const initialState = {
 export default (state = initialState, actions) => {
   switch (actions.type) {
     case INCREMENT_NO_OF_ROOMS:
+      // console.log("INCREMENT ROOM ", actions.payload)
+      let { roomsNo, adultsNo } = actions.payload
+      const noOfAdultsToIncreseBy =
+        parseInt(roomsNo) + 1 > parseInt(adultsNo) ? 1 : 0
+
       return {
         ...state,
-        no_of_rooms: state.no_of_rooms + actions.payload,
+        no_of_rooms: state.no_of_rooms + 1,
+        no_of_adults: state.no_of_adults + noOfAdultsToIncreseBy,
       }
 
     case DECREMENT_NO_OF_ROOMS:
-      console.log("DECREMENT ROOM NO ", actions.payload)
-      const { noRooms, noAdults, noChildren } = actions.payload
+      let { noRooms, noAdults, noChildren } = actions.payload
       const totalPersons = noAdults + noChildren
       const excessPersonsAfterRoomDecrement = totalPersons - (noRooms - 1) * 4
-      console.log("EXCESS ", excessPersonsAfterRoomDecrement)
+      // console.log("DECR ACTIONS RECD ", actions.payload)
 
       const excessChildrenToReduce =
         excessPersonsAfterRoomDecrement > 0 &&
@@ -42,12 +47,6 @@ export default (state = initialState, actions) => {
       const leftOverExcessAfterReducingChildren =
         excessPersonsAfterRoomDecrement > 0 &&
         excessPersonsAfterRoomDecrement - excessChildrenToReduce
-
-      console.log("EXCESS Children ", excessChildrenToReduce)
-      console.log(
-        "LEFT OverExcessAfterReducingChildren ",
-        leftOverExcessAfterReducingChildren,
-      )
 
       return {
         ...state,

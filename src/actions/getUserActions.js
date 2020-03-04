@@ -8,10 +8,13 @@ import {
   DECREMENT_NO_OF_CHILDREN,
 } from "./types"
 
-export const incrementRoomsNo = () => {
+export const incrementRoomsNo = (roomsNo, adultsNo) => {
   return {
     type: INCREMENT_NO_OF_ROOMS,
-    payload: 1,
+    payload: {
+      roomsNo,
+      adultsNo,
+    },
   }
 }
 
